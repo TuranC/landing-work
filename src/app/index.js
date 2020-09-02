@@ -1,0 +1,11 @@
+import '../../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../style/first-window-page.scss';
+import '../style/main.scss';
+import '@fortawesome/fontawesome-free';
+import '../public/images/logo.png';
+import '../public/images/laptop-money.png';
+import '../public/images/clock.png';
+import '../public/images/zero.png';
+import '../public/images/milk.png'
+import '../public/images/tasks.png';
+import '../public/images/people.png'
