@@ -72,7 +72,49 @@ $grey: #56565e;
 }
 
 @media (max-width: 576px) {
+  .info-cards {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
 
+    .info-cards-first-layer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 0;
+    }
+  }
+
+  .info-cards-first-layer-card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: $white;
+    padding: 1em 1em;
+    margin-top: 2em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+    .info-cards-first-layer-card-clock {
+      width: 40%;
+
+      .info-cards-first-layer-card-clock-img {
+        width: 80%;
+        margin: 3em 0 2em 1em;
+      }
+    }
+  }
+
+  .info-cards-first-layer-card-texts {
+    width: 60%;
+    margin-top: 0;
+
+    .info-cards-first-layer-card-texts-info {
+      color: $grey;
+      margin-top: 0;
+      line-height: 2em;
+    }
+  }
 }
 
 @media (min-width: 576px) {
@@ -80,13 +122,176 @@ $grey: #56565e;
 }
 
 @media (min-width: 768px) {
+  .info-cards {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
 
+    .info-cards-first-layer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: 0;
+    }
+  }
+
+  .info-cards-first-layer-card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: $white;
+    padding: 1em 1em;
+    margin-top: 2em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+    .info-cards-first-layer-card-clock {
+      width: 40%;
+
+      .info-cards-first-layer-card-clock-img {
+        width: 80%;
+        margin: 1em 0 1em 1em;
+      }
+    }
+  }
+
+  .info-cards-first-layer-card-texts {
+    width: 60%;
+    margin-top: 1em;
+  }
 }
 
 @media (min-width: 992px) {
+  .info-cards {
+    display: flex;
+    flex-direction: column;
 
+    .info-cards-first-layer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 2em;
+    }
+  }
+
+  .info-cards-first-layer-card {
+    display: flex;
+    flex-direction: row;
+    width: 48.5%;
+    background-color: $white;
+    padding: 3em 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+    .info-cards-first-layer-card-clock {
+      width: 40%;
+
+      .info-cards-first-layer-card-clock-img {
+        width: 80%;
+        margin: 1.5em 0 1.5em 1em;
+      }
+    }
+  }
+
+  .info-cards-first-layer-card-texts {
+    width: 60%;
+
+    .info-cards-first-layer-card-texts-bold {
+      font-weight: bold;
+    }
+
+    .info-cards-first-layer-card-texts-info {
+      color: $grey;
+      margin-top: 1.5em;
+      line-height: 2em;
+    }
+
+    .info-cards-first-layer-card-texts-button {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 0.7em;
+      letter-spacing: 1px;
+      background-color: $light_blue;
+      color: $white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin-top: 1.5em;
+
+      &:hover {
+        border: 2px solid $grey;
+        background-color: transparent;
+        color: $grey;
+        padding: 8px 18px;
+      }
+    }
+  }
 }
 
 @media (min-width: 1200px) {
-  
+  .info-cards {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+
+    .info-cards-first-layer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 2em;
+    }
+  }
+
+  .info-cards-first-layer-card {
+    display: flex;
+    flex-direction: row;
+    width: 48.5%;
+    background-color: $white;
+    padding: 3em 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+    .info-cards-first-layer-card-clock {
+      width: 40%;
+
+      .info-cards-first-layer-card-clock-img {
+        width: 80%;
+        margin: 1.5em 0 1.5em 1em;
+      }
+    }
+  }
+
+  .info-cards-first-layer-card-texts {
+    width: 60%;
+
+    .info-cards-first-layer-card-texts-bold {
+      font-weight: bold;
+    }
+
+    .info-cards-first-layer-card-texts-info {
+      color: $grey;
+      margin-top: 1.5em;
+      line-height: 2em;
+    }
+
+    .info-cards-first-layer-card-texts-button {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 0.7em;
+      letter-spacing: 1px;
+      background-color: $light_blue;
+      color: $white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin-top: 1.5em;
+
+      &:hover {
+        border: 2px solid $grey;
+        background-color: transparent;
+        color: $grey;
+        padding: 8px 18px;
+      }
+    }
+  }
 }

@@ -1,6 +1,9 @@
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../style/first-window-page.scss';
-import '../style/main.scss';
+import '../style/info-cards.scss';
+import '../style/zero.scss';
+import '../style/buttons-info.scss';
+import '../style/girl.scss';
 import '@fortawesome/fontawesome-free';
 import '../public/images/logo.png';
 import '../public/images/laptop-money.png';
@@ -9,3 +12,5 @@ import '../public/images/zero.png';
 import '../public/images/milk.png'
 import '../public/images/tasks.png';
 import '../public/images/people.png'
+import '../public/images/girl.png';
+import '../public/images/grey-background.png';
