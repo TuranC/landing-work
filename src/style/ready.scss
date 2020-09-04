@@ -1,0 +1,130 @@
+$blue: #1293a9;
+$light_blue: #0eb4b4;
+$dark_blue: #32007b;
+$darkest_blue: #262c82;
+$white: #fffff6;
+$darkest_white: #f2f7fb;
+$grey: #56565e;
+
+.ready {
+  margin-top: 5em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .ready-text {
+    display: flex;
+    flex-direction: column;
+    color: $white;
+
+    .ready-text-p {
+      color: $darkest_white;
+      opacity: 0.6;
+    }
+  }
+}
+
+.ready-buttons {
+  margin-top: 0.5em;
+
+  .ready-buttons-in {
+    background-color: $white;
+    color: $light_blue;
+    padding: 10px 45px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-left: 2em;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $white;
+      padding: 8px 44px;
+      color: $white;
+    }
+  }
+
+  .ready-buttons-up {
+    background-color: $light_blue;
+    color: $white;
+    padding: 10px 45px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-size: 0.9em;
+    font-weight: bold;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $white;
+      padding: 8px 44px;
+      color: $white;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .ready {
+    margin-top: 5em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .ready-text {
+      display: flex;
+      flex-direction: column;
+      color: $white;
+
+      .ready-text-p {
+        color: $darkest_white;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .ready-buttons {
+    margin-top: 0.5em;
+
+    .ready-buttons-in {
+      background-color: $white;
+      color: $light_blue;
+      padding: 10px 35px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      font-size: 0.9em;
+      font-weight: bold;
+      margin-left: 1em;
+
+      &:hover {
+        background-color: transparent;
+        border: 1px solid $white;
+        padding: 8px 44px;
+        color: $white;
+      }
+    }
+
+    .ready-buttons-up {
+      background-color: $light_blue;
+      color: $white;
+      padding: 10px 35px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      font-size: 0.9em;
+      font-weight: bold;
+
+      &:hover {
+        background-color: transparent;
+        border: 1px solid $white;
+        padding: 8px 44px;
+        color: $white;
+      }
+    }
+  }
+}
