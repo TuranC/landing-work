@@ -9,7 +9,7 @@ import '../public/images/girl.png';
 import '../public/images/grey-background.png';
 import '../public/images/face.png';
 import '../public/images/rus.png';
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../../node_modules/bootstrap/scss/bootstrap.scss';
 import '../style/info-cards.scss';
 import '../style/zero.scss';
 import '../style/buttons-info.scss';
