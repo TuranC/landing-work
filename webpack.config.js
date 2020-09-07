@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
     entry: {
       main: path.resolve(__dirname, 'src/app/index.js'),
-      "first-style": path.resolve(__dirname, 'src/app/firstStyle.js'),
+      'first-style': path.resolve(__dirname, 'src/app/firstStyle.js'),
     },
     output: {
         path: path.join(__dirname, 'docs'),
@@ -54,9 +54,14 @@ module.exports = {
         ],
     },
     plugins: [
+        // new HtmlWebpackPlugin({
+        //     template: __dirname + "/docs/index.html",
+        //     inject: false,
+        //     filename: "index.html"
+        // }),
         new HtmlWebpackPlugin({
-            template: __dirname + "/docs/index.html",
-            inject: false,
+            template: __dirname + "/src/public/index.html",
+            inject: 'body',
             filename: "index.html"
         }),
         new MiniCssExtractPlugin({

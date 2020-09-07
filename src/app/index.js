@@ -19,44 +19,23 @@ import '../style/testimonials.scss';
 import '../style/ready.scss';
 import '../style/footer-info.scss';
 import '../app/firstStyle';
-import {testimonials} from "./texts";
+import Swiper, { Navigation, Pagination } from 'swiper';
+import 'swiper/swiper-bundle.css';
 
-let pos = 0;
-let allP = document.querySelectorAll('#inner > div > p');
-let allSpan = document.querySelectorAll('#position > span');
+Swiper.use([Navigation, Pagination]);
 
-(function init() {
-    allP[0].innerHTML = testimonials[0].text;
-    allP[1].innerHTML = testimonials[0].name;
-    allP[2].innerHTML = testimonials[0].job;
-})();
-
-inner.addEventListener('click', function (event) {
-    if (event.target.id === 'prev') {
-        if (pos > 0) {
-            pos--;
-            changePosition(pos);
-        }
-    } else if (event.target.id === 'next') {
-        if (pos < 4) {
-            pos++;
-            changePosition(pos)
-        }
+const swiper = new Swiper('.swiper-container',{
+    direction: 'horizontal',
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    scrollbar: {
+        el: '.swiper-scrollbar',
     }
-});
-
-function changePosition(pos) {
-    allP[0].innerHTML = testimonials[pos].text;
-    allP[1].innerHTML = testimonials[pos].name;
-    allP[2].innerHTML = testimonials[pos].job;
-
-    changePosSpan(pos);
-}
-
-function changePosSpan(pos) {
-    for(let span of allSpan) {
-        span.classList.remove('circle-active');
-    }
-    allSpan[pos].classList.add('circle-active');
-}
+})
 
