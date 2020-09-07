@@ -1,4 +1,3 @@
-import '@fortawesome/fontawesome-free';
 import '../public/images/logo.png';
 import '../public/images/laptop-money.png';
 import '../public/images/clock.png';

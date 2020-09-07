@@ -6,11 +6,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
     entry: {
       main: path.resolve(__dirname, 'src/app/index.js'),
-      firstStyle: path.resolve(__dirname, 'src/app/firstStyle.js'),
+      "first-style": path.resolve(__dirname, 'src/app/firstStyle.js'),
     },
     output: {
         path: path.join(__dirname, 'docs'),
-        filename: '[name].[contenthash].js',
+        filename: '[name].js',
     },
     module: {
         rules: [
@@ -55,10 +55,12 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: __dirname + "/src/public/index.html",
+            template: __dirname + "/docs/index.html",
+            inject: false,
+            filename: "index.html"
         }),
         new MiniCssExtractPlugin({
-            filename: '[name].[contenthash].css',
+            filename: '[name].css',
         }),
         new webpack.HashedModuleIdsPlugin(),
     ],
