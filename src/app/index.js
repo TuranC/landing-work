@@ -1,13 +1,3 @@
-import '../../node_modules/bootstrap/dist/css/bootstrap.css';
-import '../style/first-window-page.scss';
-import '../style/info-cards.scss';
-import '../style/zero.scss';
-import '../style/buttons-info.scss';
-import '../style/girl.scss';
-import '../style/background.scss';
-import '../style/testimonials.scss';
-import '../style/ready.scss';
-import '../style/footer-info.scss';
 import '@fortawesome/fontawesome-free';
 import '../public/images/logo.png';
 import '../public/images/laptop-money.png';
@@ -20,13 +10,21 @@ import '../public/images/girl.png';
 import '../public/images/grey-background.png';
 import '../public/images/face.png';
 import '../public/images/rus.png';
-
+import '../../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../style/info-cards.scss';
+import '../style/zero.scss';
+import '../style/buttons-info.scss';
+import '../style/girl.scss';
+import '../style/background.scss';
+import '../style/testimonials.scss';
+import '../style/ready.scss';
+import '../style/footer-info.scss';
+import '../app/firstStyle';
 import {testimonials} from "./texts";
 
 let pos = 0;
 let allP = document.querySelectorAll('#inner > div > p');
 let allSpan = document.querySelectorAll('#position > span');
-
 
 (function init() {
     allP[0].innerHTML = testimonials[0].text;
