@@ -24,19 +24,19 @@ $grey: #56565e;
     height: 2000px;
     background: repeating-linear-gradient(-30deg, $blue, $blue 400px, $light_blue 400px, $light_blue 800px);
     clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 90%);
-    z-index: -1000;
+    z-index: -500;
   }
 }
 
 .content-background {
   .content-striped {
     position: absolute;
-    top: 1000px;
+    top: 0;
     width: 100%;
-    height: 2800px;
+    height: 4000px;
     background: url("../public/images/grey-background.png");
     //background: $darkest_white;
-    clip-path: polygon(0 28.5%, 100% 0, 100% 72%, 0 100%);
+
     z-index: -1000;
   }
 }
@@ -61,5 +61,73 @@ $grey: #56565e;
     background: repeating-linear-gradient(-30deg, $blue, $blue 400px, $light_blue 400px, $light_blue 800px);
     clip-path: polygon(0 55%, 100% 0, 100% 100%, 0% 100%);
     z-index: -1000;
+  }
+}
+
+@media (max-width: 576px) {
+  .content-background {
+    .content-striped {
+      position: absolute;
+      top: 1000px;
+      width: 100%;
+      height: 5000px;
+      background: url("../public/images/grey-background.png");
+      //background: $darkest_white;
+
+      z-index: -1000;
+    }
+  }
+
+  .footer-background {
+    margin-top: -10em;
+
+    .footer-striped {
+      position: absolute;
+      width: 100%;
+      height: 2000px;
+      background: linear-gradient(to left top, $light_blue, $dark_blue);
+      clip-path: polygon(0 55%, 100% 0, 100% 100%, 0% 100%);
+      opacity: 0.8;
+      z-index: -1;
+    }
+
+    .footer-gradient {
+      position: absolute;
+      width: 100%;
+      height: 2000px;
+      background: repeating-linear-gradient(-30deg, $blue, $blue 400px, $light_blue 400px, $light_blue 800px);
+      clip-path: polygon(0 55%, 100% 0, 100% 100%, 0% 100%);
+      z-index: -1000;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .content-background {
+    .content-striped {
+      position: absolute;
+      top: 1000px;
+      width: 100%;
+      height: 4000px;
+      background: url("../public/images/grey-background.png");
+      //background: $darkest_white;
+
+      z-index: -1000;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .content-background {
+    .content-striped {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 4000px;
+      background: url("../public/images/grey-background.png");
+      //background: $darkest_white;
+
+      z-index: -1000;
+    }
   }
 }
