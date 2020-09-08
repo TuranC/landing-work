@@ -10,53 +10,53 @@ $grey: #56565e;
   margin-top: 18em;
 
   .testimonials-title {
-    text-align: center;
     margin-bottom: 4em;
+    text-align: center;
   }
 }
 
 .testimonials-image {
-  position: relative;
-  top: 2.5em;
+  align-items: center;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
+  position: relative;
+  top: 2.5em;
   z-index: 1000;
 
   .testimonials-image-img {
-    width: 7%;
     border: 2px solid $white;
     border-radius: 50%;
+    width: 7%;
   }
 }
 
 .swiper-slider-inner {
-  text-align: center;
-  margin: 5em 12em;
   color: $grey;
+  margin: 5em 12em;
   opacity: 0.9;
+  text-align: center;
 
   .swiper-slider-inner-bold {
     font-weight: bold;
-    margin-top: 1em;
     margin-bottom: 1em;
+    margin-top: 1em;
   }
 }
 
 .swiper-container {
   background-color: $white;
-  height: 300px;
   border-radius: 5px;
+  height: 300px;
 }
 
 .firms {
-  margin: 5em auto;
-  width: 50%;
+  color: $white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  color: $white;
+  margin: 5em auto;
+  width: 50%;
 }
 
 @media (max-width: 576px) {
@@ -64,54 +64,54 @@ $grey: #56565e;
     margin-top: 18em;
 
     .testimonials-title {
-      text-align: center;
       margin-bottom: 4em;
+      text-align: center;
     }
   }
 
   .testimonials-image {
-    position: relative;
-    top: 2.5em;
+    align-items: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
+    position: relative;
+    top: 2.5em;
     z-index: 1000;
 
     .testimonials-image-img {
-      width: 25%;
       border: 2px solid $white;
       border-radius: 50%;
+      width: 25%;
     }
   }
 
   .swiper-slider-inner {
-    text-align: center;
-    margin: 3em 2.5em;
     color: $grey;
+    margin: 3em 2.5em;
     opacity: 0.9;
+    text-align: center;
 
     .swiper-slider-inner-bold {
       font-weight: bold;
-      margin-top: 1em;
       margin-bottom: 1em;
+      margin-top: 1em;
     }
   }
 
   .swiper-container {
     background-color: $white;
-    height: 430px;
     border-radius: 5px;
+    height: 430px;
   }
 
   .firms {
-    margin: 3em auto;
-    width: 80%;
+    color: $white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: $white;
+    margin: 3em auto;
     text-align: center;
+    width: 80%;
   }
 }
 
@@ -120,76 +120,76 @@ $grey: #56565e;
     margin-top: 18em;
 
     .testimonials-title {
-      text-align: center;
       margin-bottom: 4em;
+      text-align: center;
     }
   }
 
   .testimonials-image {
-    position: relative;
-    top: 2.5em;
+    align-items: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
+    position: relative;
+    top: 2.5em;
     z-index: 1000;
 
     .testimonials-image-img {
-      width: 7%;
       border: 2px solid $white;
       border-radius: 50%;
+      width: 7%;
     }
   }
 
   .swiper-slider-inner {
-    text-align: center;
-    margin: 5em 6em;
     color: $grey;
+    margin: 5em 6em;
     opacity: 0.9;
+    text-align: center;
 
     .swiper-slider-inner-bold {
       font-weight: bold;
-      margin-top: 1em;
       margin-bottom: 1em;
+      margin-top: 1em;
     }
   }
 
   .swiper-container {
     background-color: $white;
-    height: 300px;
     border-radius: 5px;
+    height: 300px;
   }
 
   .firms {
-    margin: 5em auto;
-    width: 80%;
+    color: $white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: $white;
+    margin: 5em auto;
+    width: 80%;
   }
 }
 
 @media (min-width: 992px) {
   .swiper-slider-inner {
-    text-align: center;
-    margin: 5em 12em;
     color: $grey;
+    margin: 5em 12em;
     opacity: 0.9;
+    text-align: center;
 
     .swiper-slider-inner-bold {
       font-weight: bold;
-      margin-top: 1em;
       margin-bottom: 1em;
+      margin-top: 1em;
     }
   }
 
   .firms {
-    margin: 5em auto;
-    width: 50%;
+    color: $white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: $white;
+    margin: 5em auto;
+    width: 50%;
   }
 }

@@ -19,6 +19,7 @@ import '../style/testimonials.scss';
 import '../style/ready.scss';
 import '../style/footer-info.scss';
 import '../app/firstStyle';
+import lozad from 'lozad';
 import Swiper, { Navigation, Pagination } from 'swiper';
 import 'swiper/swiper-bundle.css';
 
@@ -38,4 +39,7 @@ const swiper = new Swiper('.swiper-container',{
         el: '.swiper-scrollbar',
     }
 })
+
+const observer = lozad();
+observer.observe();
 
