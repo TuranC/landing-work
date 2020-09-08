@@ -40,6 +40,8 @@ const swiper = new Swiper('.swiper-container',{
     }
 })
 
-const observer = lozad();
+let el = document.querySelectorAll('.lozad');
+
+const observer = lozad(el);
 observer.observe();
 
