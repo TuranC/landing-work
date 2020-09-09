@@ -1,18 +1,18 @@
-@import 'variables.scss';
+@import 'variables';
 
 *,
-*:after,
-*:before {
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
 @font-face {
   font-family: 'Gotham Pro Medium';
-  src: url("../assets/fonts/gothamPro.ttf") format("ttf");
+  src: url('../assets/fonts/gothamPro.ttf') format('ttf');
 }
 
 body {
-  font-family: "Gotham Pro Medium", sans-serif;
+  font-family: 'Gotham Pro Medium', sans-serif;
   overflow-x: hidden;
 }
 
@@ -24,9 +24,9 @@ p {
 /* -------------- header navigation ------------------ */
 
 .header-navigation {
-  border-bottom: 1px solid rgba(255, 255, 255, .2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
-  .header-navigation-nav {
+  &-nav {
     display: flex;
     padding: 0;
   }
@@ -35,16 +35,16 @@ p {
 .header-logo {
   order: 1;
 
-  .header-logo-img {
-    width: 140px;
+  &-img {
     height: 100px;
+    width: 140px;
   }
 }
 
 .header-navigation-list {
-  width: 50%;
   opacity: 0.7;
   order: 2;
+  width: 50%;
 
   .header-navigation-link {
     letter-spacing: 1px;
@@ -54,11 +54,11 @@ p {
 .header-navigation-sign-in {
   order: 3;
 
-  .header-navigation-sign-in-button {
-    border: none;
+  &-button {
     background: none;
-    letter-spacing: 1px;
+    border: 0;
     font-weight: bold;
+    letter-spacing: 1px;
     opacity: 0.8;
     padding-right: 0;
   }
@@ -70,16 +70,16 @@ p {
   .header-logo {
     order: 0;
 
-    .header-logo-img {
-      width: 140px;
+    &-img {
       height: 100px;
+      width: 140px;
     }
   }
 
   .header-navigation-list {
-    width: 100%;
     opacity: 0.7;
     order: 2;
+    width: 100%;
 
     .header-navigation-link {
       letter-spacing: 1px;
@@ -89,11 +89,11 @@ p {
   .header-navigation-sign-in {
     order: 1;
 
-    .header-navigation-sign-in-button {
-      border: none;
+    &-button {
       background: none;
-      letter-spacing: 1px;
+      border: 0;
       font-weight: bold;
+      letter-spacing: 1px;
       opacity: 0.8;
     }
   }
@@ -114,23 +114,23 @@ p {
 }
 
 .header-greeting-info-subscribe-text {
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  width: 75%;
   background-color: $darkest_blue;
   border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  width: 75%;
 }
 
 .header-greeting-info-subscribe-button {
   background-color: $light_blue;
+  border: 0;
   border-radius: 30px;
-  border: none;
+  font-size: 1em;
+  font-weight: bold;
   margin: 5px;
   padding: 5px;
   width: 20%;
-  font-size: 1em;
-  font-weight: bold;
 
   &:hover {
     background-color: transparent;
@@ -147,7 +147,7 @@ p {
 .header-greeting-info-title {
   margin-top: 3em;
 
-  .header-greeting-info-title-text {
+  &-text {
     color: $white;
     font-weight: bold;
   }
@@ -158,9 +158,9 @@ p {
 
   .header-greeting-info-text-p {
     color: $white;
-    opacity: 0.8;
-    letter-spacing: 0.05em;
     font-weight: 200;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
   }
 }
 
@@ -172,12 +172,12 @@ p {
 }
 
 .header-greeting-info-buttons-free {
-  width: 55%;
   background-color: $light_blue;
-  border: none;
+  border: 0;
   border-radius: 5px;
-  padding: 10px;
   color: $white;
+  padding: 10px;
+  width: 55%;
 
   &:hover {
     background-color: transparent;
@@ -187,30 +187,30 @@ p {
 }
 
 .header-greeting-info-buttons-sign-in {
-  width: 20%;
-  color: $white;
   background-color: transparent;
   border: 2px solid $white;
   border-radius: 5px;
-  padding: 8px;
+  color: $white;
   margin-right: 5em;
+  padding: 8px;
+  width: 20%;
 
   &:hover {
     background-color: $light_blue;
-    border: none;
+    border: 0;
     padding: 10px;
   }
 }
 
 .header-greeting-img {
-  position: relative;
   left: 5em;
+  position: relative;
   top: -3em;
   width: 60%;
 
-  .header-greeting-img-laptop {
-    width: 110%;
+  &-laptop {
     height: 100%;
+    width: 110%;
   }
 }
 
@@ -224,28 +224,28 @@ p {
 
   .header-greeting-info {
     margin-top: 2em;
-    width: 100%;
     order: 1;
+    width: 100%;
   }
 
   .header-greeting-info-subscribe-text {
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    width: 100%;
     background-color: $darkest_blue;
     border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
   }
 
   .header-greeting-info-subscribe-button {
     background-color: $light_blue;
+    border: 0;
     border-radius: 30px;
-    border: none;
+    font-size: 1em;
+    font-weight: bold;
     margin: 5px;
     padding: 5px;
     width: 20%;
-    font-size: 1em;
-    font-weight: bold;
 
     &:hover {
       background-color: transparent;
@@ -261,7 +261,7 @@ p {
   .header-greeting-info-title {
     margin-top: 1em;
 
-    .header-greeting-info-title-text {
+    &-text {
       color: $white;
       font-weight: bold;
     }
@@ -272,37 +272,37 @@ p {
 
     .header-greeting-info-text-p {
       color: $white;
-      opacity: 0.8;
-      letter-spacing: 0.05em;
       font-weight: 200;
+      letter-spacing: 0.05em;
+      opacity: 0.8;
     }
   }
 
   .header-greeting-info-buttons-sign-in {
-    width: 25%;
-    color: $white;
     background-color: transparent;
     border: 2px solid $white;
     border-radius: 5px;
-    padding: 8px;
+    color: $white;
     margin-right: 0;
+    padding: 8px;
+    width: 25%;
 
     &:hover {
       background-color: $light_blue;
-      border: none;
+      border: 0;
       padding: 10px;
     }
   }
 
   .header-greeting-img {
-    position: relative;
     left: -0.2em;
+    position: relative;
     top: 1em;
     width: 60%;
 
     .header-greeting-img-laptop {
-      width: 170%;
       height: 80%;
+      width: 170%;
     }
   }
 }
@@ -314,23 +314,23 @@ p {
   }
 
   .header-greeting-info-subscribe-text {
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    width: 85%;
     background-color: $darkest_blue;
     border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 85%;
   }
 
   .header-greeting-info-subscribe-button {
     background-color: $light_blue;
+    border: 0;
     border-radius: 30px;
-    border: none;
+    font-size: 1em;
+    font-weight: bold;
     margin: 5px;
     padding: 5px;
     width: 50%;
-    font-size: 1em;
-    font-weight: bold;
 
     &:hover {
       background-color: transparent;
@@ -342,7 +342,7 @@ p {
   .header-greeting-info-title {
     margin-top: 1em;
 
-    .header-greeting-info-title-text {
+    &-text {
       color: $white;
       font-weight: bold;
     }
@@ -351,39 +351,39 @@ p {
   .header-greeting-info-text {
     margin-top: 1em;
 
-    .header-greeting-info-text-p {
+    &-p {
       color: $white;
-      opacity: 0.8;
-      letter-spacing: 0.05em;
       font-weight: 200;
+      letter-spacing: 0.05em;
+      opacity: 0.8;
     }
   }
 
   .header-greeting-info-buttons-sign-in {
-    width: 25%;
-    color: $white;
     background-color: transparent;
     border: 2px solid $white;
     border-radius: 5px;
-    padding: 8px;
+    color: $white;
     margin-right: 1em;
+    padding: 8px;
+    width: 25%;
 
     &:hover {
       background-color: $light_blue;
-      border: none;
+      border: 0;
       padding: 10px;
     }
   }
 
   .header-greeting-img {
-    position: relative;
     left: -1em;
+    position: relative;
     top: 1em;
     width: 60%;
 
-    .header-greeting-img-laptop {
-      width: 110%;
+    &-laptop {
       height: 90%;
+      width: 110%;
     }
   }
 }
@@ -395,23 +395,23 @@ p {
   }
 
   .header-greeting-info-subscribe-text {
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    width: 85%;
     background-color: $darkest_blue;
     border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 85%;
   }
 
   .header-greeting-info-subscribe-button {
     background-color: $light_blue;
+    border: 0;
     border-radius: 30px;
-    border: none;
+    font-size: 1em;
+    font-weight: bold;
     margin: 5px;
     padding: 5px;
     width: 20%;
-    font-size: 1em;
-    font-weight: bold;
 
     &:hover {
       background-color: transparent;
@@ -421,30 +421,30 @@ p {
   }
 
   .header-greeting-info-buttons-sign-in {
-    width: 20%;
-    color: $white;
     background-color: transparent;
     border: 2px solid $white;
     border-radius: 5px;
-    padding: 8px;
+    color: $white;
     margin-right: 3em;
+    padding: 8px;
+    width: 20%;
 
     &:hover {
       background-color: $light_blue;
-      border: none;
+      border: 0;
       padding: 10px;
     }
   }
 
   .header-greeting-img {
-    position: relative;
     left: 2em;
+    position: relative;
     top: 1em;
     width: 60%;
 
-    .header-greeting-img-laptop {
-      width: 100%;
+    &-laptop {
       height: 90%;
+      width: 100%;
     }
   }
 }
@@ -456,39 +456,39 @@ p {
   }
 
   .header-greeting-info-subscribe-text {
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    width: 75%;
     background-color: $darkest_blue;
     border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 75%;
   }
 
   .header-greeting-info-buttons-sign-in {
-    width: 20%;
-    color: $white;
     background-color: transparent;
     border: 2px solid $white;
     border-radius: 5px;
-    padding: 8px;
+    color: $white;
     margin-right: 5em;
+    padding: 8px;
+    width: 20%;
 
     &:hover {
       background-color: $light_blue;
-      border: none;
+      border: 0;
       padding: 10px;
     }
   }
 
   .header-greeting-img {
-    position: relative;
     left: 5em;
+    position: relative;
     top: -3em;
     width: 60%;
 
     .header-greeting-img-laptop {
-      width: 110%;
       height: 100%;
+      width: 110%;
     }
   }
 }

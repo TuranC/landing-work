@@ -1,7 +1,7 @@
 @import '~@fortawesome/fontawesome-free/css/fontawesome.min.css';
 @import '~@fortawesome/fontawesome-free/css/solid.min.css';
-@import "~@fortawesome/fontawesome-free/css/brands.min.css";
-@import 'variables.scss';
+@import '~@fortawesome/fontawesome-free/css/brands.min.css';
+@import 'variables';
 
 .info-cards {
   display: flex;
@@ -16,21 +16,21 @@
 }
 
 .info-cards-first-layer-card {
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: row;
-  width: 48.5%;
-  background-color: $white;
   padding: 3em 1em;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  width: 48.5%;
 }
 
 .info-cards-first-layer-card-clock {
   width: 40%;
 
   &-img {
-    width: 80%;
     margin: 1.5em 0 1.5em 1em;
+    width: 80%;
   }
 }
 
@@ -43,26 +43,26 @@
 
   &-info {
     color: $grey;
-    margin-top: 1.5em;
     line-height: 2em;
+    margin-top: 1.5em;
   }
 }
 
 .info-cards-first-layer-card-texts-button {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 0.7em;
-  letter-spacing: 1px;
   background-color: $light_blue;
-  color: $white;
-  border: none;
+  border: 0;
   border-radius: 5px;
-  padding: 10px 20px;
+  color: $white;
+  font-size: 0.7em;
+  font-weight: bold;
+  letter-spacing: 1px;
   margin-top: 1.5em;
+  padding: 10px 20px;
+  text-transform: uppercase;
 
   &:hover {
-    border: 2px solid $grey;
     background-color: transparent;
+    border: 2px solid $grey;
     color: $grey;
     padding: 8px 18px;
   }
@@ -70,9 +70,9 @@
 
 @media (max-width: 576px) {
   .info-cards {
-    margin-top: 5em;
     display: flex;
     flex-direction: column;
+    margin-top: 5em;
 
     &-first-layer {
       display: flex;
@@ -83,42 +83,42 @@
   }
 
   .info-cards-first-layer-card {
+    background-color: $white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: row;
-    width: 100%;
-    background-color: $white;
-    padding: 1em 1em;
     margin-top: 2em;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    padding: 1em;
+    width: 100%;
   }
 
   .info-cards-first-layer-card-clock {
     width: 40%;
 
     &-img {
-      width: 80%;
       margin: 3em 0 2em 1em;
+      width: 80%;
     }
   }
 
   .info-cards-first-layer-card-texts {
-    width: 60%;
     margin-top: 0;
+    width: 60%;
 
     &-info {
       color: $grey;
-      margin-top: 0;
       line-height: 2em;
+      margin-top: 0;
     }
   }
 }
 
 @media (min-width: 768px) {
   .info-cards {
-    margin-top: 5em;
     display: flex;
     flex-direction: column;
+    margin-top: 5em;
 
     .info-cards-first-layer {
       display: flex;
@@ -129,28 +129,28 @@
   }
 
   .info-cards-first-layer-card {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
     background-color: $white;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
     margin-top: 2em;
-    padding: 1em 1em;
+    padding: 1em;
+    width: 100%;
   }
 
   .info-cards-first-layer-card-clock {
     width: 40%;
 
     &-img {
-      width: 80%;
       margin: 1em 0 1em 1em;
+      width: 80%;
     }
   }
 
   .info-cards-first-layer-card-texts {
-    width: 60%;
     margin-top: 1em;
+    width: 60%;
   }
 }
 
@@ -169,20 +169,20 @@
 
   .info-cards-first-layer-card {
     background-color: $white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: row;
-    width: 48.5%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    border-radius: 5px;
     padding: 3em 1em;
+    width: 48.5%;
   }
 
   .info-cards-first-layer-card-clock {
     width: 40%;
 
     &-img {
-      width: 80%;
       margin: 1.5em 0 1.5em 1em;
+      width: 80%;
     }
   }
 
@@ -202,15 +202,15 @@
 
   .info-cards-first-layer-card-texts-button {
     background-color: $light_blue;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 0.7em;
-    letter-spacing: 1px;
-    border: none;
+    border: 0;
     border-radius: 5px;
     color: $white;
+    font-size: 0.7em;
+    font-weight: bold;
+    letter-spacing: 1px;
     margin-top: 1.5em;
     padding: 10px 20px;
+    text-transform: uppercase;
 
     &:hover {
       background-color: transparent;
@@ -236,21 +236,21 @@
   }
 
   .info-cards-first-layer-card {
-    display: flex;
-    flex-direction: row;
-    width: 48.5%;
     background-color: $white;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
     padding: 3em 1em;
+    width: 48.5%;
   }
 
   .info-cards-first-layer-card-clock {
     width: 40%;
 
     &-img {
-      width: 80%;
       margin: 1.5em 0 1.5em 1em;
+      width: 80%;
     }
   }
 
@@ -270,15 +270,15 @@
 
   .info-cards-first-layer-card-texts-button {
     background-color: $light_blue;
-    border: none;
+    border: 0;
     border-radius: 5px;
     color: $white;
-    font-weight: bold;
     font-size: 0.7em;
-    text-transform: uppercase;
+    font-weight: bold;
     letter-spacing: 1px;
     margin-top: 1.5em;
     padding: 10px 20px;
+    text-transform: uppercase;
 
     &:hover {
       background-color: transparent;

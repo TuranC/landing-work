@@ -1,57 +1,57 @@
-@import 'variables.scss';
+@import 'variables';
 
 .footer-info {
-  margin-top: 5em;
+  border-top: 1px solid $blue;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-top: 1px solid $blue;
+  margin-top: 5em;
   padding-top: 5em;
 
-  .footer-info-general {
-    display: flex;
-    flex-direction: column;
-    margin-top: -2em;
+}
 
-    .footer-info-general-image {
-      margin-bottom: 1em;
+.footer-info-general {
+  display: flex;
+  flex-direction: column;
+  margin-top: -2em;
+}
 
-      .footer-info-general-image-img {
-        width: 7em;
-        height: 5.5em;
-      }
-    }
+.footer-info-general-who {
+  &-p {
+    color: $darkest_white;
+    opacity: 0.6;
+  }
+}
 
-    .footer-info-general-country {
-      margin-bottom: 3em;
-      color: $white;
+.footer-info-general-country {
+  color: $white;
+  margin-bottom: 3em;
+}
 
-      .footer-info-general-country-c {
-        letter-spacing: 1px;
+.footer-info-general-country-c {
+  letter-spacing: 1px;
 
-        img {
-          margin-right: 1em;
-          width: 15px;
-          height: 12px;
-        }
-      }
+  img {
+    height: 12px;
+    margin-right: 1em;
+    width: 15px;
+  }
+}
 
-      .footer-info-general-country-r {
-        letter-spacing: 1px;
+.footer-info-general-country-r {
+  letter-spacing: 1px;
 
-        i {
-          margin-right: 1em;
-        }
-      }
-    }
+  i {
+    margin-right: 1em;
+  }
+}
 
-    .footer-info-general-who {
+.footer-info-general-image {
+  margin-bottom: 1em;
 
-      .footer-info-general-who-p {
-        color: $darkest_white;
-        opacity: 0.6;
-      }
-    }
+  &-img {
+    height: 5.5em;
+    width: 7em;
   }
 }
 
@@ -60,45 +60,43 @@
 
   p {
     color: $darkest_white;
-    opacity: 0.6;
-    margin-top: 0.6em;
     font-size: 0.85em;
+    margin-top: 0.6em;
+    opacity: 0.6;
   }
 }
 
-
 .events {
-
-  .events-title {
+  &-title {
     color: $white;
     margin-bottom: 2em;
   }
 }
 
 .events-time {
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   background-color: rgba(38, 44, 130, 0.7);
   border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin-bottom: 2em;
 }
 
 .events-time-date {
   background-color: $light_blue;
+  border: 0;
   border-radius: 30px;
-  border: none;
+  font-size: 1em;
+  font-weight: bold;
   margin: 5px;
   padding: 5px;
   width: 30%;
-  font-size: 1em;
-  font-weight: bold;
 
   &:hover {
     background-color: transparent;
-    color: $white;
     border: 2px solid $white;
+    color: $white;
     padding: 3px;
   }
 }
@@ -111,71 +109,70 @@
 
 @media (max-width: 576px) {
   .footer-info {
-    margin-top: 3em;
+    border-top: 1px solid $blue;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    border-top: 1px solid $blue;
+    margin-top: 3em;
     padding-top: 2em;
+  }
 
-    .footer-info-general {
-      width: 45%;
-      display: flex;
-      flex-direction: column;
-      margin-top: 0.2em;
+  .footer-info-general {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.2em;
+    width: 45%;
+  }
 
-      .footer-info-general-image {
-        margin-bottom: 1em;
+  .footer-info-general-image {
+    margin-bottom: 1em;
 
-        .footer-info-general-image-img {
-          width: 7em;
-          height: 5.5em;
-        }
-      }
+    &-img {
+      height: 5.5em;
+      width: 7em;
+    }
+  }
 
-      .footer-info-general-country {
-        margin-bottom: 1.5em;
-        color: $white;
+  .footer-info-general-country {
+    color: $white;
+    margin-bottom: 1.5em;
+  }
 
-        .footer-info-general-country-c {
-          letter-spacing: 1px;
+  .footer-info-general-country-c {
+    letter-spacing: 1px;
 
-          img {
-            margin-right: 1em;
-            width: 15px;
-            height: 12px;
-          }
-        }
+    img {
+      height: 12px;
+      margin-right: 1em;
+      width: 15px;
+    }
+  }
 
-        .footer-info-general-country-r {
-          letter-spacing: 1px;
+  .footer-info-general-country-r {
+    letter-spacing: 1px;
 
-          i {
-            margin-right: 1em;
-          }
-        }
-      }
+    i {
+      margin-right: 1em;
+    }
+  }
 
-      .footer-info-general-who {
-
-        .footer-info-general-who-p {
-          color: $darkest_white;
-          opacity: 0.6;
-        }
-      }
+  .footer-info-general-who {
+    &-p {
+      color: $darkest_white;
+      opacity: 0.6;
     }
   }
 
   .footer-info-another {
     color: $white;
-    width: 45%;
     margin-top: 2em;
+    width: 45%;
 
     p {
       color: $darkest_white;
-      opacity: 0.6;
-      margin-top: 0.6em;
       font-size: 0.85em;
+      margin-top: 0.6em;
+      opacity: 0.6;
     }
   }
 
