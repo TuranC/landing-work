@@ -58,6 +58,17 @@
   }
 }
 
+.zero-info-icons-i-svg {
+  background-color: $light_blue;
+  padding: 5px;
+  border-radius: 50%;
+  fill: $white;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  left: 2px;
+}
+
 .zero-info-icons-i-alignment-t {
   &::before {
     left: -0.02em;

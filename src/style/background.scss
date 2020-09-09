@@ -61,7 +61,7 @@
       background: url('../public/images/grey-background.png');
       height: 5000px;
       position: absolute;
-      top: 1000px;
+      top: 500px;
       width: 100%;
       z-index: -1000;
     }
@@ -92,6 +92,19 @@
 }
 
 @media (min-width: 576px) {
+  .content-background {
+    .content-striped {
+      background: url('../public/images/grey-background.png');
+      height: 4000px;
+      position: absolute;
+      top: 1000px;
+      width: 100%;
+      z-index: -1000;
+    }
+  }
+}
+
+@media (min-width: 768px) {
   .content-background {
     .content-striped {
       background: url('../public/images/grey-background.png');

@@ -34,11 +34,15 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                test: /\.(eot)(\?v=\d+\.\d+\.\d+)?$/,
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]'
                 }
+            },
+            {
+                test: /\.svg$/,
+                loader: 'svg-inline-loader'
             },
             {
                 test: /\.(woff(2)?|ttf)$/,
@@ -59,19 +63,19 @@ module.exports = {
         //     inject: false,
         //     filename: "index.html"
         // }),
-        // new HtmlWebpackPlugin({
-        //     template: __dirname + "/src/public/index.html",
-        //     inject: 'body',
-        //     filename: "index.html",
-        // }),
         new HtmlWebpackPlugin({
-            template: path.join(__dirname, '/docs/index.html'),
-            inject: false,
+            template: __dirname + "/src/public/index.html",
+            inject: 'body',
             filename: "index.html",
-            hash: true,
-            css: ['first-style.[contenthash].css', 'main.[contenthash].css'],
-            js: ['first-style.[contenthash].js', 'main.[contenthash].js'],
         }),
+        // new HtmlWebpackPlugin({
+        //     template: path.join(__dirname, '/docs/index.html'),
+        //     inject: false,
+        //     filename: "index.html",
+        //     hash: true,
+        //     css: ['first-style.[contenthash].css', 'main.[contenthash].css'],
+        //     js: ['first-style.[contenthash].js', 'main.[contenthash].js'],
+        // }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
         }),
