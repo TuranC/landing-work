@@ -45,3 +45,4 @@ let el = document.querySelectorAll('.lozad');
 const observer = lozad(el);
 observer.observe();
 
+import '../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss'
