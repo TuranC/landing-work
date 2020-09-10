@@ -141,7 +141,7 @@
     width: 40%;
 
     &-img {
-      margin: 1em 0 1em 1em;
+      margin: 1.4em 0 1em 1em;
       width: 80%;
     }
   }
@@ -150,18 +150,39 @@
     margin-top: 1em;
     width: 60%;
   }
+
+  .info-cards-first-layer-card-texts-button {
+    background-color: $light_blue;
+    border: 0;
+    border-radius: 5px;
+    color: $white;
+    font-size: 0.8em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 1.5em;
+    padding: 12px 40px;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: transparent;
+      border: 2px solid $grey;
+      color: $grey;
+      padding: 10px 38px;
+    }
+  }
 }
 
 @media (min-width: 992px) {
   .info-cards {
     display: flex;
     flex-direction: column;
+    margin-top: -1em;
 
     .info-cards-first-layer {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      margin-top: 2em;
+      margin-top: 0;
     }
   }
 
@@ -171,7 +192,10 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: row;
-    padding: 3em 1em;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 2em;
+    padding: 2.5em 1em;
     width: 48.5%;
   }
 
@@ -179,22 +203,28 @@
     width: 40%;
 
     &-img {
-      margin: 1.5em 0 1.5em 1em;
-      width: 80%;
+      margin: 3.5em 0 1.5em 1em;
+      width: 90%;
     }
   }
 
   .info-cards-first-layer-card-texts {
-    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 52.5%;
+    margin-top: 0;
 
     &-bold {
       font-weight: bold;
+      font-size: 1.2em;
     }
 
     &-info {
       color: $grey;
       line-height: 2em;
-      margin-top: 1.5em;
+      font-size: 0.9em;
+      margin-top: 0.8em;
     }
   }
 
@@ -203,18 +233,19 @@
     border: 0;
     border-radius: 5px;
     color: $white;
-    font-size: 0.7em;
+    font-size: 0.8em;
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     margin-top: 1.5em;
-    padding: 10px 20px;
+    padding: 13px 30px;
     text-transform: uppercase;
+    width: 80%;
 
     &:hover {
       background-color: transparent;
       border: 2px solid $grey;
       color: $grey;
-      padding: 8px 18px;
+      padding: 11px 28px;
     }
   }
 }
@@ -223,13 +254,13 @@
   .info-cards {
     display: flex;
     flex-direction: column;
-    margin-top: 0;
+    margin-top: -1em;
 
     .info-cards-first-layer {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      margin-top: 2em;
+      margin-top: 0;
     }
   }
 
@@ -239,7 +270,10 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: row;
-    padding: 3em 1em;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 2em;
+    padding: 2.5em 1em;
     width: 48.5%;
   }
 
@@ -247,22 +281,28 @@
     width: 40%;
 
     &-img {
-      margin: 1.5em 0 1.5em 1em;
-      width: 80%;
+      margin: 1.9em 0 1.5em 1em;
+      width: 90%;
     }
   }
 
   .info-cards-first-layer-card-texts {
-    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 0;
 
     &-bold {
       font-weight: bold;
+      font-size: 1.2em;
     }
 
     &-info {
       color: $grey;
       line-height: 2em;
-      margin-top: 1.5em;
+      font-size: 0.9em;
+      margin-top: 0.8em;
     }
   }
 
@@ -271,18 +311,19 @@
     border: 0;
     border-radius: 5px;
     color: $white;
-    font-size: 0.7em;
+    font-size: 0.8em;
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     margin-top: 1.5em;
-    padding: 10px 20px;
+    padding: 13px 20px;
     text-transform: uppercase;
+    width: 60%;
 
     &:hover {
       background-color: transparent;
       border: 2px solid $grey;
       color: $grey;
-      padding: 8px 18px;
+      padding: 11px 18px;
     }
   }
 }

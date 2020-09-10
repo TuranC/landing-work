@@ -6,3 +6,4 @@ import '../public/min-images/milk.min.png';
 import '../public/min-images/people.min.png';
 import '../public/min-images/tasks.min.png';
 import '../public/min-images/zero.min.png';
+import '../public/min-images/logo.min.png';

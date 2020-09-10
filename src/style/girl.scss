@@ -45,11 +45,31 @@
     justify-content: space-between;
     margin-top: 4em;
     width: 100%;
+  }
 
-    &-info {
-      margin: 3em 0;
-      order: 1;
-      width: 100%;
+  .girl-info {
+    margin: 3em 0;
+    width: 100%;
+    order: 1;
+
+    &-title {
+      font-weight: bold;
+      line-height: 1.5em;
+      margin-bottom: 1em;
+    }
+
+    &-text-blue {
+      color: $light_blue;
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-bottom: 0.8em;
+    }
+
+    &-text {
+      color: $grey;
+      font-size: 1.2em;
+      line-height: 1.8em;
+      opacity: 0.9;
     }
   }
 
@@ -71,11 +91,31 @@
     justify-content: space-between;
     margin-top: 4em;
     width: 100%;
+  }
 
-    &-info {
-      margin: 3em 0;
-      order: 1;
-      width: 100%;
+  .girl-info {
+    margin: 3em 0;
+    width: 100%;
+    order: 1;
+
+    &-title {
+      font-weight: bold;
+      line-height: 1.5em;
+      margin-bottom: 1em;
+    }
+
+    &-text-blue {
+      color: $light_blue;
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-bottom: 0.8em;
+    }
+
+    &-text {
+      color: $grey;
+      font-size: 1.2em;
+      line-height: 1.8em;
+      opacity: 0.9;
     }
   }
 
@@ -96,11 +136,30 @@
     justify-content: space-between;
     margin-top: 4em;
     width: 100%;
+  }
 
-    &-info {
-      margin: auto 0;
-      order: 0;
-      width: 35%;
+  .girl-info {
+    margin: 2.5em 0 auto;
+    width: 35%;
+
+    &-title {
+      font-weight: bold;
+      line-height: 1.5em;
+      margin-bottom: 1em;
+    }
+
+    &-text-blue {
+      color: $light_blue;
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-bottom: 0.8em;
+    }
+
+    &-text {
+      color: $grey;
+      font-size: 1.2em;
+      line-height: 1.8em;
+      opacity: 0.9;
     }
   }
 
@@ -109,8 +168,8 @@
     width: 50%;
 
     &-img {
-      margin-left: 5em;
-      width: 70%;
+      margin-left: 2em;
+      width: 80%;
     }
   }
 }
@@ -122,10 +181,30 @@
     justify-content: space-between;
     margin-top: 4em;
     width: 100%;
+  }
 
-    .girl-info {
-      margin: auto 0;
-      width: 35%;
+  .girl-info {
+    margin: 2.5em 0 auto;
+    width: 35%;
+
+    &-title {
+      font-weight: bold;
+      line-height: 1.5em;
+      margin-bottom: 1em;
+    }
+
+    &-text-blue {
+      color: $light_blue;
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-bottom: 0.8em;
+    }
+
+    &-text {
+      color: $grey;
+      font-size: 1.2em;
+      line-height: 1.8em;
+      opacity: 0.9;
     }
   }
 
@@ -133,8 +212,8 @@
     width: 50%;
 
     &-img {
-      margin-left: 5em;
-      width: 70%;
+      margin-left: 2em;
+      width: 80%;
     }
   }
 }
