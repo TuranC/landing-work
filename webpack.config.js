@@ -10,7 +10,7 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, 'docs'),
-        filename: '[name].js',
+        filename: '[name].[contenthash].js',
     },
     module: {
         rules: [
@@ -72,12 +72,9 @@ module.exports = {
             template: path.join(__dirname, '/docs/index.html'),
             inject: false,
             filename: "index.html",
-            hash: true,
-            css: ['first-style.[contenthash].css', 'main.[contenthash].css'],
-            js: ['first-style.[contenthash].js', 'main.[contenthash].js'],
         }),
         new MiniCssExtractPlugin({
-            filename: '[name].css',
+            filename: '[name].[contenthash].css',
         }),
         new webpack.HashedModuleIdsPlugin(),
     ],
