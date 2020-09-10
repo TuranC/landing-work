@@ -9,6 +9,7 @@ import '../public/images/girl.png';
 import '../public/images/grey-background.png';
 import '../public/images/face.png';
 import '../public/images/rus.png';
+import '../app/minImages';
 import '../../node_modules/bootstrap/scss/bootstrap.scss';
 import '../style/info-cards.scss';
 import '../style/zero.scss';
@@ -44,5 +45,3 @@ let el = document.querySelectorAll('.lozad');
 
 const observer = lozad(el);
 observer.observe();
-
-import '../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss'
