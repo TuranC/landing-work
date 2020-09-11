@@ -59,11 +59,6 @@ module.exports = {
     },
     plugins: [
         // new HtmlWebpackPlugin({
-        //     template: __dirname + "/docs/index.html",
-        //     inject: false,
-        //     filename: "index.html"
-        // }),
-        // new HtmlWebpackPlugin({
         //     template: __dirname + "/src/public/index.html",
         //     inject: 'body',
         //     filename: "index.html",
