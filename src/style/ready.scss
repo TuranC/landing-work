@@ -13,11 +13,11 @@
   display: flex;
   flex-direction: column;
 
-  .ready-text-p {
+  &-p {
     color: $darkest_white;
-    opacity: 0.6;
-    letter-spacing: 1px;
     font-size: 1.1em;
+    letter-spacing: 1px;
+    opacity: 0.6;
   }
 }
 
@@ -77,19 +77,19 @@
     display: flex;
     flex-direction: column;
 
-    .ready-text-p {
+    &-p {
       color: $darkest_white;
-      opacity: 0.6;
       letter-spacing: 1px;
+      opacity: 0.6;
     }
   }
 
   .ready-buttons {
-    margin-top: 0.5em;
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-top: 0.5em;
+    width: 100%;
   }
 
   .ready-buttons-in {
@@ -146,11 +146,11 @@
     flex-direction: column;
     margin-bottom: 2em;
 
-    .ready-text-p {
+    &-p {
       color: $darkest_white;
-      opacity: 0.6;
-      letter-spacing: 1px;
       font-size: 1.1em;
+      letter-spacing: 1px;
+      opacity: 0.6;
     }
   }
 

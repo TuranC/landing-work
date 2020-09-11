@@ -10,7 +10,7 @@
 .zero-image {
   width: 50%;
 
-  .zero-image-img {
+  &-img {
     width: 100%;
   }
 }
@@ -28,20 +28,20 @@
 
   &-text-blue {
     color: $light_blue;
-    font-weight: bold;
     font-size: 1.1em;
+    font-weight: bold;
     letter-spacing: 1px;
     margin-bottom: 1.4em;
   }
 
   &-text {
-    font-size: 1.1em;
     color: $grey;
+    font-size: 1.1em;
     line-height: 2.1em;
     margin-bottom: 1em;
   }
 
-  .zero-info-text-small {
+  &-text-small {
     color: $grey;
     font-size: 0.85em;
     line-height: 2em;
@@ -49,13 +49,13 @@
 }
 
 .zero-info-icons {
-  width: 26%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 2em;
+  width: 26%;
 
-  .zero-info-icons-i {
+  &-i {
     background-color: $light_blue;
     border-radius: 50%;
     color: $white;
@@ -66,13 +66,13 @@
 
 .zero-info-icons-i-svg {
   background-color: $light_blue;
-  padding: 5px;
   border-radius: 50%;
   fill: $white;
-  width: 30px;
   height: 30px;
-  position: relative;
   left: 2px;
+  padding: 5px;
+  position: relative;
+  width: 30px;
 }
 
 .zero-info-icons-i-alignment-t {
@@ -89,64 +89,65 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (min-width: 320px) {
   .zero {
     display: flex;
     flex-direction: column;
     margin: 10em auto 0;
     width: 90%;
+  }
 
-    .zero-image {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      width: 100%;
+  .zero-image {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 
-      .zero-image-img {
-        width: 90%;
-      }
+    &-img {
+      min-height: 234px;
+      width: 90%;
+    }
+  }
+
+  .zero-info {
+    margin-left: 0;
+    padding-top: 1em;
+    width: 100%;
+
+    &-title {
+      font-weight: bold;
+      line-height: 1.5em;
+      margin-bottom: 1em;
     }
 
-    .zero-info {
-      margin-left: 0;
-      padding-top: 1em;
-      width: 100%;
+    &-text-blue {
+      color: $light_blue;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 1em;
+    }
 
-      .zero-info-title {
-        font-weight: bold;
-        line-height: 1.5em;
-        margin-bottom: 1em;
-      }
+    &-text {
+      color: $grey;
+      line-height: 2em;
+      margin-bottom: 2em;
+    }
 
-      .zero-info-text-blue {
-        color: $light_blue;
-        font-weight: bold;
-        letter-spacing: 1px;
-        margin-bottom: 1em;
-      }
-
-      .zero-info-text {
-        color: $grey;
-        line-height: 2em;
-        margin-bottom: 2em;
-      }
-
-      .zero-info-text-small {
-        color: $grey;
-        font-size: 0.85em;
-        line-height: 2em;
-      }
+    &-text-small {
+      color: $grey;
+      font-size: 0.85em;
+      line-height: 2em;
     }
   }
 
   .zero-info-icons {
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 2em;
+    width: 100%;
 
-    .zero-info-icons-i {
+    &-i {
       background-color: $light_blue;
       border-radius: 50%;
       color: $white;
@@ -157,16 +158,43 @@
 
   .zero-info-icons-i-svg {
     background-color: $light_blue;
-    padding: 5px;
     border-radius: 50%;
     fill: $white;
-    width: 30px;
     height: 30px;
-    position: relative;
     left: 2px;
+    padding: 5px;
+    position: relative;
+    width: 30px;
   }
 }
 
+@media (min-width: 375px) {
+  .zero-image {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &-img {
+      min-height: 279px;
+      width: 90%;
+    }
+  }
+}
+
+@media (min-width: 425px) {
+  .zero-image {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &-img {
+      min-height: 320px;
+      width: 90%;
+    }
+  }
+}
 
 @media (min-width: 768px) {
   .zero {
@@ -181,26 +209,26 @@
     padding-top: 1em;
     width: 100%;
 
-    .zero-info-title {
+    &-title {
       font-weight: bold;
       line-height: 1.5em;
       margin-bottom: 1em;
     }
 
-    .zero-info-text-blue {
+    &-text-blue {
       color: $light_blue;
       font-weight: bold;
       letter-spacing: 1px;
       margin-bottom: 1em;
     }
 
-    .zero-info-text {
+    &-text {
       color: $grey;
       line-height: 2em;
       margin-bottom: 2em;
     }
 
-    .zero-info-text-small {
+    &-text-small {
       color: $grey;
       font-size: 0.85em;
       line-height: 2em;
@@ -213,19 +241,20 @@
     flex-direction: column;
     width: 100%;
 
-    .zero-image-img {
+    &-img {
+      min-height: 558px;
       width: 90%;
     }
   }
 
   .zero-info-icons {
-    width: 20%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 2em;
+    width: 20%;
 
-    .zero-info-icons-i {
+    &-i {
       background-color: $light_blue;
       border-radius: 50%;
       color: $white;
@@ -236,13 +265,13 @@
 
   .zero-info-icons-i-svg {
     background-color: $light_blue;
-    padding: 5px;
     border-radius: 50%;
     fill: $white;
-    width: 30px;
     height: 30px;
-    position: relative;
     left: 2px;
+    padding: 5px;
+    position: relative;
+    width: 30px;
   }
 }
 
@@ -267,20 +296,20 @@
 
     &-text-blue {
       color: $light_blue;
-      font-weight: bold;
       font-size: 1.1em;
+      font-weight: bold;
       letter-spacing: 1px;
       margin-bottom: 1.4em;
     }
 
     &-text {
-      font-size: 1.1em;
       color: $grey;
+      font-size: 1.1em;
       line-height: 2.1em;
       margin-bottom: 1em;
     }
 
-    .zero-info-text-small {
+    &-text-small {
       color: $grey;
       font-size: 0.85em;
       line-height: 2em;
@@ -293,19 +322,20 @@
     flex-direction: column;
     width: 50%;
 
-    .zero-image-img {
+    &-img {
+      min-height: 418px;
       width: 100%;
     }
   }
 
   .zero-info-icons {
-    width: 35%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 2em;
+    width: 35%;
 
-    .zero-info-icons-i {
+    &-i {
       background-color: $light_blue;
       border-radius: 50%;
       color: $white;
@@ -316,13 +346,13 @@
 
   .zero-info-icons-i-svg {
     background-color: $light_blue;
-    padding: 5px;
     border-radius: 50%;
     fill: $white;
-    width: 30px;
     height: 30px;
-    position: relative;
     left: 2px;
+    padding: 5px;
+    position: relative;
+    width: 30px;
   }
 }
 
@@ -340,20 +370,20 @@
 
     &-text-blue {
       color: $light_blue;
-      font-weight: bold;
       font-size: 1.1em;
+      font-weight: bold;
       letter-spacing: 1px;
       margin-bottom: 1.4em;
     }
 
     &-text {
-      font-size: 1.1em;
       color: $grey;
+      font-size: 1.1em;
       line-height: 2.1em;
       margin-bottom: 1em;
     }
 
-    .zero-info-text-small {
+    &-text-small {
       color: $grey;
       font-size: 0.85em;
       line-height: 2em;
@@ -366,19 +396,20 @@
     flex-direction: column;
     width: 50%;
 
-    .zero-image-img {
+    &-img {
+      min-height: 499px;
       width: 100%;
     }
   }
 
   .zero-info-icons {
-    width: 26%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 2em;
+    width: 26%;
 
-    .zero-info-icons-i {
+    &-i {
       background-color: $light_blue;
       border-radius: 50%;
       color: $white;
@@ -389,12 +420,12 @@
 
   .zero-info-icons-i-svg {
     background-color: $light_blue;
-    padding: 5px;
     border-radius: 50%;
     fill: $white;
-    width: 30px;
     height: 30px;
-    position: relative;
     left: 2px;
+    padding: 5px;
+    position: relative;
+    width: 30px;
   }
 }

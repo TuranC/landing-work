@@ -2,11 +2,11 @@
 
 .testimonials {
   margin-top: 18em;
+}
 
-  .testimonials-title {
-    margin-bottom: 0;
-    text-align: center;
-  }
+.testimonials-title {
+  margin-bottom: 0;
+  text-align: center;
 }
 
 .testimonials-image {
@@ -18,7 +18,7 @@
   top: 2.5em;
   z-index: 1000;
 
-  .testimonials-image-img {
+  &-img {
     border: 2px solid $white;
     border-radius: 50%;
     width: 7%;
@@ -31,7 +31,7 @@
   opacity: 0.9;
   text-align: center;
 
-  .swiper-slider-inner-bold {
+  &-bold {
     font-weight: bold;
     margin-bottom: 1em;
     margin-top: 1em;
@@ -54,9 +54,9 @@
 }
 
 @media (min-width: 320px) {
-    .testimonials {
-      margin-top: 18em;
-    }
+  .testimonials {
+    margin-top: 18em;
+  }
 
   .testimonials-title {
     margin-bottom: 4em;
@@ -68,60 +68,61 @@
     }
   }
 
-    .testimonials-image {
-      align-items: center;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      position: relative;
-      top: 2.5em;
-      z-index: 1000;
+  .testimonials-image {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    top: 2.5em;
+    z-index: 1000;
 
-      .testimonials-image-img {
-        border: 2px solid $white;
-        border-radius: 50%;
-        width: 25%;
-      }
+    &-img {
+      border: 2px solid $white;
+      border-radius: 50%;
+      min-height: 72px;
+      width: 25%;
+    }
+  }
+
+  .swiper-slider-inner {
+    color: $grey;
+    margin: 3em 2.5em;
+    opacity: 0.9;
+    text-align: center;
+
+    &-text {
+      font-size: 1.1em;
+      line-height: 2em;
     }
 
-    .swiper-slider-inner {
-      color: $grey;
-      margin: 3em 2.5em;
-      opacity: 0.9;
-      text-align: center;
-
-      .swiper-slider-inner-text {
-        font-size: 1.1em;
-        line-height: 2em;
-      }
-
-      .swiper-slider-inner-bold {
-        font-weight: bold;
-        margin-bottom: 1em;
-        margin-top: 1em;
-      }
-
-      .swiper-slider-inner-job {
-        font-style: italic;
-        font-size: 0.9em;
-      }
+    &-bold {
+      font-weight: bold;
+      margin-bottom: 1em;
+      margin-top: 1em;
     }
 
-    .swiper-container {
-      background-color: $white;
-      border-radius: 5px;
-      height: 550px;
+    &-job {
+      font-size: 0.9em;
+      font-style: italic;
     }
+  }
 
-    .firms {
-      color: $white;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      margin: 3em auto;
-      text-align: center;
-      width: 80%;
-    }
+  .swiper-container {
+    background-color: $white;
+    border-radius: 5px;
+    height: 550px;
+  }
+
+  .firms {
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 3em auto;
+    text-align: center;
+    width: 80%;
+  }
 }
 
 @media (min-width: 375px) {
@@ -148,9 +149,10 @@
     top: 2.5em;
     z-index: 1000;
 
-    .testimonials-image-img {
+    &-img {
       border: 2px solid $white;
       border-radius: 50%;
+      min-height: 86px;
       width: 25%;
     }
   }
@@ -161,20 +163,20 @@
     opacity: 0.9;
     text-align: center;
 
-    .swiper-slider-inner-text {
+    &-text {
       font-size: 1.1em;
       line-height: 2em;
     }
 
-    .swiper-slider-inner-bold {
+    &-bold {
       font-weight: bold;
       margin-bottom: 1em;
       margin-top: 1em;
     }
 
-    .swiper-slider-inner-job {
-      font-style: italic;
+    &-job {
       font-size: 0.9em;
+      font-style: italic;
     }
   }
 
@@ -205,9 +207,10 @@
     top: 2.5em;
     z-index: 1000;
 
-    .testimonials-image-img {
+    &-img {
       border: 2px solid $white;
       border-radius: 50%;
+      min-height: 79px;
       width: 20%;
     }
   }
@@ -237,7 +240,7 @@
     top: 2.5em;
     z-index: 1000;
 
-    .testimonials-image-img {
+    &-img {
       border: 2px solid $white;
       border-radius: 50%;
       width: 10%;
@@ -250,20 +253,20 @@
     opacity: 0.9;
     text-align: center;
 
-    .swiper-slider-inner-text {
+    &-text {
       font-size: 1.1em;
       line-height: 2em;
     }
 
-    .swiper-slider-inner-bold {
+    &-bold {
       font-weight: bold;
       margin-bottom: 1em;
       margin-top: 1em;
     }
 
-    .swiper-slider-inner-job {
-      font-style: italic;
+    &-job {
       font-size: 0.9em;
+      font-style: italic;
     }
   }
 
@@ -280,6 +283,25 @@
     justify-content: space-between;
     margin: 5em auto;
     width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .testimonials-image {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    top: 2.5em;
+    z-index: 1000;
+
+    &-img {
+      border: 2px solid $white;
+      border-radius: 50%;
+      min-height: 69px;
+      width: 10%;
+    }
   }
 }
 
@@ -307,34 +329,35 @@
     top: 2.5em;
     z-index: 1000;
 
-    .testimonials-image-img {
+    &-img {
       border: 2px solid $white;
       border-radius: 50%;
+      min-height: 74px;
       width: 8%;
     }
   }
 
   .swiper-slider-inner {
     color: $grey;
-    margin: 5em 15em 5em;
+    margin: 5em 15em;
     opacity: 0.9;
     text-align: center;
 
-    .swiper-slider-inner-text {
+    &-text {
       font-size: 1.1em;
       line-height: 2em;
     }
 
-    .swiper-slider-inner-bold {
+    &-bold {
+      font-size: 0.9em;
       font-weight: bold;
       margin-bottom: 0.5em;
       margin-top: 2em;
-      font-size: 0.9em;
     }
 
-    .swiper-slider-inner-job {
-      font-style: italic;
+    &-job {
       font-size: 0.9em;
+      font-style: italic;
     }
   }
 
@@ -378,34 +401,35 @@
     top: 2.5em;
     z-index: 1000;
 
-    .testimonials-image-img {
+    &-img {
       border: 2px solid $white;
       border-radius: 50%;
+      min-height: 77px;
       width: 7%;
     }
   }
 
   .swiper-slider-inner {
     color: $grey;
-    margin: 5em 15em 5em;
+    margin: 5em 15em;
     opacity: 0.9;
     text-align: center;
 
-    .swiper-slider-inner-text {
+    &-text {
       font-size: 1.1em;
       line-height: 2em;
     }
 
-    .swiper-slider-inner-bold {
+    &-bold {
+      font-size: 0.9em;
       font-weight: bold;
       margin-bottom: 0.5em;
       margin-top: 2em;
-      font-size: 0.9em;
     }
 
-    .swiper-slider-inner-job {
-      font-style: italic;
+    &-job {
       font-size: 0.9em;
+      font-style: italic;
     }
   }
 

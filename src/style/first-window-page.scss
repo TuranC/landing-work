@@ -65,34 +65,34 @@ p {
 }
 
 .header-navigation-sign-in-button-link {
+  color: $white;
   display: inline-block;
   position: relative;
   text-decoration: none;
-  color: $white;
 }
 
-.header-navigation-sign-in-button-link:before {
+.header-navigation-sign-in-button-link::before {
+  background-color: $white;
+  bottom: 0;
   content: '';
   display: block;
-  position: absolute;
   height: 1px;
-  width: 0;
-  background-color: $white;
-  transition: width 0.3s ease-in-out;
   left: 0;
-  bottom: 0;
+  position: absolute;
+  transition: width 0.3s ease-in-out;
+  width: 0;
 }
 
-.header-navigation-sign-in-button-link:hover:before {
+.header-navigation-sign-in-button-link:hover::before {
   width: 100%;
 }
 
 #arrow {
+  fill: $white;
   height: 1em;
-  width: 1em;
   margin-bottom: 0.2em;
   margin-left: 0.5em;
-  fill: $white;
+  width: 1em;
 }
 
 /* ++++++++++++++++++++ header navigation media ++++++++++++++++++ */
@@ -112,7 +112,7 @@ p {
     order: 2;
     width: 100%;
 
-    .header-navigation-link {
+    &-link {
       letter-spacing: 1px;
     }
   }
@@ -129,8 +129,8 @@ p {
     opacity: 0.8;
 
     &-arrow {
-      width: 20px;
       height: 20px;
+      width: 20px;
     }
   }
 }
@@ -141,7 +141,7 @@ p {
     order: 2;
     width: 50%;
 
-    .header-navigation-link {
+    &-link {
       letter-spacing: 1px;
     }
   }
@@ -153,7 +153,7 @@ p {
     order: 2;
     width: 38%;
 
-    .header-navigation-link {
+    &-link {
       letter-spacing: 1px;
     }
   }
@@ -216,7 +216,7 @@ p {
 .header-greeting-info-text {
   margin-top: 2em;
 
-  .header-greeting-info-text-p {
+  &-p {
     color: $white;
     font-weight: 200;
     letter-spacing: 0.05em;
@@ -276,7 +276,7 @@ p {
 
 /* +++++++++++++++++++++++++ header greeting media ++++++++++++++++++++++++++ */
 
-@media (max-width: 576px) {
+@media (min-width: 320px) {
   .header-greeting {
     display: flex;
     flex-direction: column;
@@ -330,7 +330,7 @@ p {
   .header-greeting-info-text {
     margin-top: 1em;
 
-    .header-greeting-info-text-p {
+    &-p {
       color: $white;
       font-weight: 200;
       letter-spacing: 0.05em;
@@ -360,7 +360,38 @@ p {
     top: 1em;
     width: 60%;
 
-    .header-greeting-img-laptop {
+    &-laptop {
+      min-height: 300px;
+      height: 80%;
+      width: 170%;
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  .header-greeting-img {
+    left: -0.2em;
+    position: relative;
+    top: 1em;
+    width: 60%;
+
+    &-laptop {
+      min-height: 350px;
+      height: 80%;
+      width: 170%;
+    }
+  }
+}
+
+@media (min-width: 425px) {
+  .header-greeting-img {
+    left: -0.2em;
+    position: relative;
+    top: 1em;
+    width: 60%;
+
+    &-laptop {
+      min-height: 400px;
       height: 80%;
       width: 170%;
     }
@@ -416,8 +447,8 @@ p {
 
     &-text {
       color: $white;
-      line-height: 1.4em;
       font-weight: bold;
+      line-height: 1.4em;
     }
   }
 
@@ -427,8 +458,8 @@ p {
     &-p {
       color: $white;
       font-weight: 200;
-      line-height: 1.9em;
       letter-spacing: 0.05em;
+      line-height: 1.9em;
       opacity: 0.8;
     }
   }
@@ -445,9 +476,9 @@ p {
     border: 2px solid $white;
     border-radius: 5px;
     color: $white;
-    text-transform: uppercase;
     margin-right: 1em;
     padding: 8px;
+    text-transform: uppercase;
     width: 25%;
 
     &:hover {
@@ -474,13 +505,14 @@ p {
 
   .header-greeting-img {
     left: 0;
+    order: -1;
     position: relative;
     top: -2em;
     width: 100%;
-    order: -1;
 
     &-laptop {
       height: 90%;
+      min-height: 690px;
       width: 100%;
     }
   }
@@ -527,8 +559,8 @@ p {
 
   .header-greeting-info-subscribe-p {
     color: $white;
-    letter-spacing: 0.05em;
     font-size: 0.8em;
+    letter-spacing: 0.05em;
     margin-left: 0.5em;
   }
 
@@ -572,13 +604,14 @@ p {
 
   .header-greeting-img {
     left: 2em;
+    order: 1;
     position: relative;
     top: 1em;
     width: 60%;
-    order: 1;
 
     &-laptop {
       height: 90%;
+      min-height: 558px;
       width: 100%;
     }
   }
@@ -618,8 +651,8 @@ p {
 
   .header-greeting-info-subscribe-p {
     color: $white;
-    letter-spacing: 0.05em;
     font-size: 0.8em;
+    letter-spacing: 0.05em;
   }
 
   .header-greeting-info-title {
@@ -627,20 +660,20 @@ p {
 
     &-text {
       color: $white;
-      line-height: 1.4em;
       font-weight: bold;
+      line-height: 1.4em;
     }
   }
 
   .header-greeting-info-text {
     margin-top: 1.2em;
 
-    .header-greeting-info-text-p {
+    &-p {
       color: $white;
       font-size: 1.3em;
       font-weight: 200;
-      line-height: 1.9em;
       letter-spacing: 0.04em;
+      line-height: 1.9em;
       opacity: 0.8;
     }
   }
@@ -651,8 +684,8 @@ p {
     border-radius: 5px;
     color: $white;
     margin-right: 3em;
-    text-transform: uppercase;
     padding: 8px;
+    text-transform: uppercase;
     width: 25%;
 
     &:hover {
@@ -668,8 +701,9 @@ p {
     top: -2em;
     width: 60%;
 
-    .header-greeting-img-laptop {
+    &-laptop {
       height: 100%;
+      min-height: 730px;
       width: 110%;
     }
   }
