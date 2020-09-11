@@ -1,28 +1,18 @@
-$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
-@import '~@fortawesome/fontawesome-free/scss/fontawesome';
-@import '~@fortawesome/fontawesome-free/scss/solid';
-@import '~@fortawesome/fontawesome-free/scss/regular';
-@import '~@fortawesome/fontawesome-free/css/all.css';
-
-$blue: #1293a9;
-$light_blue: #0eb4b4;
-$dark_blue: #32007b;
-$darkest_blue: #262c82;
-$white: #fffff6;
+@import 'variables';
 
 *,
-*:after,
-*:before {
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
 @font-face {
   font-family: 'Gotham Pro Medium';
-  src: url("../assets/fonts/gothamPro.ttf") format("ttf");
+  src: url('../assets/fonts/gothamPro.ttf') format('ttf');
 }
 
 body {
-  font-family: "Gotham Pro Medium", sans-serif;
+  font-family: 'Gotham Pro Medium', sans-serif;
   overflow-x: hidden;
 }
 
@@ -31,36 +21,12 @@ p {
   padding: 0;
 }
 
-/* ------------------ background color ---------------------- */
-
-.main-background {
-
-  .gradient {
-    position: absolute;
-    width: 100%;
-    height: 2000px;
-    background: linear-gradient(to left top, $light_blue, $dark_blue);
-    clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 90%);
-    opacity: 0.8;
-    z-index: -1;
-  }
-
-  .striped {
-    position: absolute;
-    width: 100%;
-    height: 2000px;
-    background: repeating-linear-gradient(-30deg, $blue, $blue 400px, $light_blue 400px, $light_blue 800px);
-    clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 90%);
-    z-index: -1000;
-  }
-}
-
 /* -------------- header navigation ------------------ */
 
 .header-navigation {
-  border-bottom: 1px solid rgba(255, 255, 255, .2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
-  .header-navigation-nav {
+  &-nav {
     display: flex;
     padding: 0;
   }
@@ -69,16 +35,16 @@ p {
 .header-logo {
   order: 1;
 
-  .header-logo-img {
-    width: 140px;
+  &-img {
     height: 100px;
+    width: 140px;
   }
 }
 
 .header-navigation-list {
-  width: 50%;
   opacity: 0.7;
   order: 2;
+  width: 38%;
 
   .header-navigation-link {
     letter-spacing: 1px;
@@ -87,15 +53,46 @@ p {
 
 .header-navigation-sign-in {
   order: 3;
+}
 
-  .header-navigation-sign-in-button {
-    border: none;
-    background: none;
-    letter-spacing: 1px;
-    font-weight: bold;
-    opacity: 0.8;
-    padding-right: 0;
-  }
+.header-navigation-sign-in-button {
+  background: none;
+  border: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  padding-right: 0;
+}
+
+.header-navigation-sign-in-button-link {
+  color: $white;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+
+.header-navigation-sign-in-button-link::before {
+  background-color: $white;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transition: width 0.3s ease-in-out;
+  width: 0;
+}
+
+.header-navigation-sign-in-button-link:hover::before {
+  width: 100%;
+}
+
+#arrow {
+  fill: $white;
+  height: 1em;
+  margin-bottom: 0.2em;
+  margin-left: 0.5em;
+  width: 1em;
 }
 
 /* ++++++++++++++++++++ header navigation media ++++++++++++++++++ */
@@ -104,31 +101,60 @@ p {
   .header-logo {
     order: 0;
 
-    .header-logo-img {
-      width: 140px;
+    &-img {
       height: 100px;
+      width: 140px;
     }
   }
 
   .header-navigation-list {
-    width: 100%;
     opacity: 0.7;
     order: 2;
+    width: 100%;
 
-    .header-navigation-link {
+    &-link {
       letter-spacing: 1px;
     }
   }
 
   .header-navigation-sign-in {
     order: 1;
+  }
 
-    .header-navigation-sign-in-button {
-      border: none;
-      background: none;
+  .header-navigation-sign-in-button {
+    background: none;
+    border: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    opacity: 0.8;
+
+    &-arrow {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header-navigation-list {
+    opacity: 0.7;
+    order: 2;
+    width: 50%;
+
+    &-link {
       letter-spacing: 1px;
-      font-weight: bold;
-      opacity: 0.8;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .header-navigation-list {
+    opacity: 0.7;
+    order: 2;
+    width: 38%;
+
+    &-link {
+      letter-spacing: 1px;
     }
   }
 }
@@ -148,23 +174,23 @@ p {
 }
 
 .header-greeting-info-subscribe-text {
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  width: 75%;
   background-color: $darkest_blue;
   border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  width: 75%;
 }
 
 .header-greeting-info-subscribe-button {
   background-color: $light_blue;
+  border: 0;
   border-radius: 30px;
-  border: none;
+  font-size: 1em;
+  font-weight: bold;
   margin: 5px;
   padding: 5px;
   width: 20%;
-  font-size: 1em;
-  font-weight: bold;
 
   &:hover {
     background-color: transparent;
@@ -181,7 +207,7 @@ p {
 .header-greeting-info-title {
   margin-top: 3em;
 
-  .header-greeting-info-title-text {
+  &-text {
     color: $white;
     font-weight: bold;
   }
@@ -190,11 +216,11 @@ p {
 .header-greeting-info-text {
   margin-top: 2em;
 
-  .header-greeting-info-text-p {
+  &-p {
     color: $white;
-    opacity: 0.8;
-    letter-spacing: 0.05em;
     font-weight: 200;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
   }
 }
 
@@ -206,12 +232,12 @@ p {
 }
 
 .header-greeting-info-buttons-free {
-  width: 55%;
   background-color: $light_blue;
-  border: none;
+  border: 0;
   border-radius: 5px;
-  padding: 10px;
   color: $white;
+  padding: 10px;
+  width: 55%;
 
   &:hover {
     background-color: transparent;
@@ -221,36 +247,36 @@ p {
 }
 
 .header-greeting-info-buttons-sign-in {
-  width: 20%;
-  color: $white;
   background-color: transparent;
   border: 2px solid $white;
   border-radius: 5px;
-  padding: 8px;
+  color: $white;
   margin-right: 5em;
+  padding: 8px;
+  width: 20%;
 
   &:hover {
     background-color: $light_blue;
-    border: none;
+    border: 0;
     padding: 10px;
   }
 }
 
 .header-greeting-img {
-  position: relative;
   left: 5em;
+  position: relative;
   top: -3em;
   width: 60%;
 
-  .header-greeting-img-laptop {
-    width: 110%;
+  &-laptop {
     height: 100%;
+    width: 110%;
   }
 }
 
 /* +++++++++++++++++++++++++ header greeting media ++++++++++++++++++++++++++ */
 
-@media (max-width: 576px) {
+@media (min-width: 320px) {
   .header-greeting {
     display: flex;
     flex-direction: column;
@@ -258,28 +284,28 @@ p {
 
   .header-greeting-info {
     margin-top: 2em;
-    width: 100%;
     order: 1;
+    width: 100%;
   }
 
   .header-greeting-info-subscribe-text {
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    width: 100%;
     background-color: $darkest_blue;
     border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
   }
 
   .header-greeting-info-subscribe-button {
     background-color: $light_blue;
+    border: 0;
     border-radius: 30px;
-    border: none;
+    font-size: 1em;
+    font-weight: bold;
     margin: 5px;
     padding: 5px;
     width: 20%;
-    font-size: 1em;
-    font-weight: bold;
 
     &:hover {
       background-color: transparent;
@@ -295,7 +321,7 @@ p {
   .header-greeting-info-title {
     margin-top: 1em;
 
-    .header-greeting-info-title-text {
+    &-text {
       color: $white;
       font-weight: bold;
     }
@@ -304,67 +330,225 @@ p {
   .header-greeting-info-text {
     margin-top: 1em;
 
-    .header-greeting-info-text-p {
+    &-p {
       color: $white;
-      opacity: 0.8;
-      letter-spacing: 0.05em;
       font-weight: 200;
+      letter-spacing: 0.05em;
+      opacity: 0.8;
     }
   }
 
   .header-greeting-info-buttons-sign-in {
-    width: 25%;
-    color: $white;
     background-color: transparent;
     border: 2px solid $white;
     border-radius: 5px;
-    padding: 8px;
+    color: $white;
     margin-right: 0;
+    padding: 8px;
+    width: 25%;
 
     &:hover {
       background-color: $light_blue;
-      border: none;
+      border: 0;
       padding: 10px;
     }
   }
 
   .header-greeting-img {
-    position: relative;
     left: -0.2em;
+    position: relative;
     top: 1em;
     width: 60%;
 
-    .header-greeting-img-laptop {
-      width: 170%;
+    &-laptop {
+      min-height: 300px;
       height: 80%;
+      width: 170%;
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  .header-greeting-img {
+    left: -0.2em;
+    position: relative;
+    top: 1em;
+    width: 60%;
+
+    &-laptop {
+      min-height: 350px;
+      height: 80%;
+      width: 170%;
+    }
+  }
+}
+
+@media (min-width: 425px) {
+  .header-greeting-img {
+    left: -0.2em;
+    position: relative;
+    top: 1em;
+    width: 60%;
+
+    &-laptop {
+      min-height: 400px;
+      height: 80%;
+      width: 170%;
     }
   }
 }
 
 @media (min-width: 768px) {
+  .header-greeting {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .header-greeting-info {
+    margin-top: -1em;
+    width: 100%;
+  }
+
+  .header-greeting-info-subscribe-text {
+    align-items: center;
+    background-color: $darkest_blue;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 65%;
+  }
+
+  .header-greeting-info-subscribe-button {
+    background-color: $light_blue;
+    border: 0;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px;
+    width: 15%;
+
+    &:hover {
+      background-color: transparent;
+      border: 2px solid $white;
+      padding: 3px;
+    }
+  }
+
+  .header-greeting-info-subscribe-p {
+    color: $white;
+    font-size: 0.9em;
+    margin-left: 4em;
+  }
+
+  .header-greeting-info-title {
+    margin-top: 1em;
+
+    &-text {
+      color: $white;
+      font-weight: bold;
+      line-height: 1.4em;
+    }
+  }
+
+  .header-greeting-info-text {
+    margin-top: 0;
+
+    &-p {
+      color: $white;
+      font-weight: 200;
+      letter-spacing: 0.05em;
+      line-height: 1.9em;
+      opacity: 0.8;
+    }
+  }
+
+  .header-greeting-info-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2em;
+  }
+
+  .header-greeting-info-buttons-sign-in {
+    background-color: transparent;
+    border: 2px solid $white;
+    border-radius: 5px;
+    color: $white;
+    margin-right: 1em;
+    padding: 8px;
+    text-transform: uppercase;
+    width: 25%;
+
+    &:hover {
+      background-color: $light_blue;
+      border: 0;
+      padding: 10px;
+    }
+  }
+
+  .header-greeting-info-buttons-free {
+    background-color: $light_blue;
+    border: 0;
+    border-radius: 5px;
+    color: $white;
+    padding: 10px;
+    width: 40%;
+
+    &:hover {
+      background-color: transparent;
+      border: 2px solid $white;
+      padding: 0;
+    }
+  }
+
+  .header-greeting-img {
+    left: 0;
+    order: -1;
+    position: relative;
+    top: -2em;
+    width: 100%;
+
+    &-laptop {
+      height: 90%;
+      min-height: 690px;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .header-greeting {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   .header-greeting-info {
     margin-top: 2em;
     width: 40%;
   }
 
   .header-greeting-info-subscribe-text {
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    width: 85%;
     background-color: $darkest_blue;
     border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2em;
+    width: 90%;
   }
 
   .header-greeting-info-subscribe-button {
     background-color: $light_blue;
+    border: 0;
     border-radius: 30px;
-    border: none;
+    font-size: 0.8em;
+    font-weight: bold;
     margin: 5px;
     padding: 5px;
-    width: 50%;
-    font-size: 1em;
-    font-weight: bold;
+    width: 20%;
 
     &:hover {
       background-color: transparent;
@@ -373,156 +557,154 @@ p {
     }
   }
 
-  .header-greeting-info-title {
-    margin-top: 1em;
-
-    .header-greeting-info-title-text {
-      color: $white;
-      font-weight: bold;
-    }
-  }
-
-  .header-greeting-info-text {
-    margin-top: 1em;
-
-    .header-greeting-info-text-p {
-      color: $white;
-      opacity: 0.8;
-      letter-spacing: 0.05em;
-      font-weight: 200;
-    }
-  }
-
-  .header-greeting-info-buttons-sign-in {
-    width: 25%;
+  .header-greeting-info-subscribe-p {
     color: $white;
-    background-color: transparent;
-    border: 2px solid $white;
-    border-radius: 5px;
-    padding: 8px;
-    margin-right: 1em;
-
-    &:hover {
-      background-color: $light_blue;
-      border: none;
-      padding: 10px;
-    }
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
+    margin-left: 0.5em;
   }
 
-  .header-greeting-img {
-    position: relative;
-    left: -1em;
-    top: 1em;
-    width: 60%;
-
-    .header-greeting-img-laptop {
-      width: 110%;
-      height: 90%;
-    }
-  }
-}
-
-@media (min-width: 992px) {
-  .header-greeting-info {
-    margin-top: 4em;
-    width: 40%;
-  }
-
-  .header-greeting-info-subscribe-text {
+  .header-greeting-info-buttons {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    width: 85%;
-    background-color: $darkest_blue;
-    border-radius: 30px;
-  }
-
-  .header-greeting-info-subscribe-button {
-    background-color: $light_blue;
-    border-radius: 30px;
-    border: none;
-    margin: 5px;
-    padding: 5px;
-    width: 20%;
-    font-size: 1em;
-    font-weight: bold;
-
-    &:hover {
-      background-color: transparent;
-      border: 2px solid $white;
-      padding: 3px;
-    }
+    justify-content: space-between;
+    margin-top: 2em;
   }
 
   .header-greeting-info-buttons-sign-in {
-    width: 20%;
-    color: $white;
     background-color: transparent;
     border: 2px solid $white;
     border-radius: 5px;
-    padding: 8px;
+    color: $white;
     margin-right: 3em;
+    padding: 8px;
+    width: 25%;
 
     &:hover {
       background-color: $light_blue;
-      border: none;
+      border: 0;
       padding: 10px;
     }
   }
 
+  .header-greeting-info-buttons-free {
+    background-color: $light_blue;
+    border: 0;
+    border-radius: 5px;
+    color: $white;
+    padding: 10px;
+    width: 55%;
+
+    &:hover {
+      background-color: transparent;
+      border: 2px solid $white;
+      padding: 0;
+    }
+  }
+
   .header-greeting-img {
-    position: relative;
     left: 2em;
+    order: 1;
+    position: relative;
     top: 1em;
     width: 60%;
 
-    .header-greeting-img-laptop {
-      width: 100%;
+    &-laptop {
       height: 90%;
+      min-height: 558px;
+      width: 100%;
     }
   }
 }
 
 @media (min-width: 1200px) {
   .header-greeting-info {
-    margin-top: 8em;
+    margin-top: 6em;
     width: 40%;
   }
 
   .header-greeting-info-subscribe-text {
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    width: 75%;
     background-color: $darkest_blue;
     border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+  }
+
+  .header-greeting-info-subscribe-button {
+    background-color: $light_blue;
+    border: 0;
+    border-radius: 30px;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px;
+    width: 20%;
+
+    &:hover {
+      background-color: transparent;
+      border: 2px solid $white;
+      padding: 3px;
+    }
+  }
+
+  .header-greeting-info-subscribe-p {
+    color: $white;
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
+  }
+
+  .header-greeting-info-title {
+    margin-top: 3em;
+
+    &-text {
+      color: $white;
+      font-weight: bold;
+      line-height: 1.4em;
+    }
+  }
+
+  .header-greeting-info-text {
+    margin-top: 1.2em;
+
+    &-p {
+      color: $white;
+      font-size: 1.3em;
+      font-weight: 200;
+      letter-spacing: 0.04em;
+      line-height: 1.9em;
+      opacity: 0.8;
+    }
   }
 
   .header-greeting-info-buttons-sign-in {
-    width: 20%;
-    color: $white;
     background-color: transparent;
     border: 2px solid $white;
     border-radius: 5px;
+    color: $white;
+    margin-right: 3em;
     padding: 8px;
-    margin-right: 5em;
+    text-transform: uppercase;
+    width: 25%;
 
     &:hover {
       background-color: $light_blue;
-      border: none;
+      border: 0;
       padding: 10px;
     }
   }
 
   .header-greeting-img {
+    left: 6em;
     position: relative;
-    left: 5em;
-    top: -3em;
+    top: -2em;
     width: 60%;
 
-    .header-greeting-img-laptop {
-      width: 110%;
+    &-laptop {
       height: 100%;
+      min-height: 730px;
+      width: 110%;
     }
   }
 }

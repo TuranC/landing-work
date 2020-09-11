@@ -1,0 +1,223 @@
+@import 'variables';
+
+.ready {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5em;
+  width: 100%;
+}
+
+.ready-text {
+  color: $white;
+  display: flex;
+  flex-direction: column;
+
+  &-p {
+    color: $darkest_white;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    opacity: 0.6;
+  }
+}
+
+.ready-buttons {
+  margin-top: 0.5em;
+}
+
+.ready-buttons-in {
+  background-color: $white;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: $light_blue;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-left: 2em;
+  padding: 13px 55px;
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $white;
+    color: $white;
+    padding: 12px 54px;
+  }
+}
+
+.ready-buttons-up {
+  background-color: $light_blue;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: $white;
+  font-size: 0.9em;
+  font-weight: bold;
+  padding: 13px 55px;
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $white;
+    color: $white;
+    padding: 12px 54px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ready {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 5em;
+    width: 100%;
+  }
+
+  .ready-text {
+    color: $white;
+    display: flex;
+    flex-direction: column;
+
+    &-p {
+      color: $darkest_white;
+      letter-spacing: 1px;
+      opacity: 0.6;
+    }
+  }
+
+  .ready-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 0.5em;
+    width: 100%;
+  }
+
+  .ready-buttons-in {
+    background-color: $white;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: $light_blue;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-left: 1em;
+    padding: 10px 35px;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $white;
+      color: $white;
+      padding: 8px 44px;
+    }
+  }
+
+  .ready-buttons-up {
+    background-color: $light_blue;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: $white;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 10px 35px;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $white;
+      color: $white;
+      padding: 8px 44px;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .ready {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 5em;
+    width: 100%;
+  }
+
+  .ready-text {
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+
+    &-p {
+      color: $darkest_white;
+      font-size: 1.1em;
+      letter-spacing: 1px;
+      opacity: 0.6;
+    }
+  }
+
+  .ready-buttons-in {
+    background-color: $white;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: $light_blue;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-left: 5em;
+    padding: 13px 55px;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $white;
+      color: $white;
+      padding: 12px 54px;
+    }
+  }
+
+  .ready-buttons-up {
+    background-color: $light_blue;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: $white;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 13px 55px;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $white;
+      color: $white;
+      padding: 12px 54px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .ready {
+    align-items: end;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5em;
+    width: 100%;
+  }
+
+  .ready-buttons-in {
+    background-color: $white;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: $light_blue;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-left: 2em;
+    padding: 13px 55px;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $white;
+      color: $white;
+      padding: 12px 54px;
+    }
+  }
+}
